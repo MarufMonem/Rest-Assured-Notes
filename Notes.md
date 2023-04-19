@@ -1,3 +1,9 @@
+# API Testing by Maruf
+
+Course Link: https://www.udemy.com/course/rest-api-automation-testing-rest-assured/
+
+Course Name: Rest API Testing (Automation) from Scratch-Rest Assured Java
+
 # Intro
 
 Lets say Marriot Hotels they have their own website (frontend client) where it shows all the available rooms and through here customers can make reservations. Now there are other platforms like [booking.com](http://booking.com), [hotels.com](http://hotels.com) who also provide customer the option book rooms in Marriot Hotels. But the problem here is, to let websites like these to able to make reservation Marriot needs to expose their backend code. This is not an ideal approach as there many websites like these and exposing their intellectual property to others poses a security risk. This is where APIs come in. They pass and handle the request sent from the frontend to backend.
@@ -24,7 +30,7 @@ Soap is supported in legacy platforms and services whereas REST is a more newer 
 
 Frontend → API → Backend code → Database
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1fe467a-a815-4607-994d-985d45ca2397/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled.png)
 
 - This API handles the request sent from websites like [booking.com](http://booking.com) and the Marriot website itself.
 - The information sent from the backend is done using the `HTTP` protocol. Which is independent of any language.
@@ -82,7 +88,7 @@ The final endpoint request URL can be constructed as below:
 
 Headers represent the meta data associated with the API request and response. In layman terms, we were sending additional details to API to process our request. An example of this is:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/09b44f3f-33c5-46ca-a4ac-fda4f5d400dd/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%201.png)
 
 # Using Postman with example APIs
 
@@ -139,18 +145,18 @@ Sample Response
 
 We can pass the base URI and resources in the URL section of postman request.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f10ed432-bc4b-4c66-9e01-c6b74e310cb6/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%202.png)
 
 For query parameters we can directly write it here or use the `Params` option where we can add our key value pairs. This would automatically add our parameter values to the URL:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/328d85c5-c74c-4baf-b4a9-60ed1d29f877/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%203.png)
 
 > The HTTP method is designed by the developer so we dont have to figure out what method to use! With `POST` method we are sending the body information securely. On the other hand, `GET` would send the information through the URL itself.
 > 
 
 With respect to (WRTO) our example we need to send a JSON body.  We also need to know the format and its sequence. In most cases the body is in JSON format. When adding JSON body postman would automatically add the following indicating that the body is in JSON format. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6033617c-66a0-4f1d-83e9-b527b92decf9/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%204.png)
 
 From running the above sample code we would get a 200 response with the results:
 
@@ -689,9 +695,9 @@ Now the problem is that we did make the connection however the test itself needs
 .body(DynamicJsonPayload.newBook(isbn, aisle))
 ```
 
-[DynamicJson.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a5cd4814-18e7-4d06-a970-f0c4c8fd9866/DynamicJson.java)
+[DynamicJson.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/DynamicJson.java)
 
-[DynamicJsonPayload.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f2017df-e3a4-43c8-8c33-934b74509a93/DynamicJsonPayload.java)
+[DynamicJsonPayload.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/DynamicJsonPayload.java)
 
 # Reading a static JSON file
 
@@ -796,7 +802,7 @@ We can send attachments through the POST API call. Below is an example of upload
 - URI: [https://domain.atlassian.net/rest/api/3/issue/ISSUE_NUMBER/attachments](https://maruf-jira.atlassian.net/rest/api/3/issue/RA-1/attachments)
 - Headers:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d6ecc101-9038-41c2-9349-a1569de2d9c3/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%205.png)
 
 - In the body select form data instead of raw-json (what we have been using so far). In the form column the key WRTO example is “file” and the value is the file itself.
     - When hovering over the key cell there would be an option to select file or text. Select file which would enable the browse option in the value column. Browse and select your file.
@@ -831,7 +837,7 @@ WTRO example of JIRA when receiving a `GET` issue details response Jira sends ov
 - URI: [https://DOMAIN.atlassian.net/rest/api/2/issue/issueNumber](https://maruf-jira.atlassian.net/rest/api/2/issue/RA-1)
 - Query parameters:
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9e664ed-6305-4cf9-94e6-47bf88d0af75/Untitled.png)
+    ![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%206.png)
     
 
 The response:
@@ -935,7 +941,7 @@ https://rahulshettyacademy.com/getCourse.php?code=4%2F0AWtgzh5666VuZlha22W-xwsuK
 
 pasting the link in postman would automatically parse it 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/00372a21-0a20-4e28-9fff-718fd1de8cce/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%207.png)
 
 Here we need the access code: 
 
@@ -1017,9 +1023,9 @@ Now lets use this access token to get the final response containing our requeste
 
 ### Recap
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b55b2a1-5aa2-402a-af91-d139460b771e/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%208.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac35d078-c504-43b2-8baa-5a38f28feb2f/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%209.png)
 
 ### Postman shortcut to get Access Token
 
@@ -1027,11 +1033,11 @@ There is an option is Postman to run the whole process that we did in one go. Ho
 
 Add the related information in Postman
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d6513bf-7661-4334-807c-341f488eac5d/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2010.png)
 
 Clicking on Get New Access Token would take you to the google login page and after successful login a token would be generated
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/74a5ee9b-7ba5-479f-9077-9a059b3f00fe/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2011.png)
 
 ### Automating the process
 
@@ -1126,7 +1132,7 @@ The Client Credentials grant type is used when the client application wants to a
 
 Here as there is no human resource needed there is no authorization code needed. As mentioned above it is accessing its own resources so only the client ID and secret is needed. In postman the following information is needed:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64ed480f-5ba1-45e9-83b4-8d795466440b/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2012.png)
 
 So the automation steps are also similar except we dont need the code portion. 
 
@@ -1472,21 +1478,21 @@ Rest Assured Automation using Java - 50
 SoapUI Webservices testing - 40
 ```
 
-[Api.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e99a5d52-743e-49a3-9545-74df58b469f1/Api.java)
+[Api.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Api.java)
 
-[Courses.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6b470e94-2e8a-43cf-8d4c-89ab39b62d2b/Courses.java)
+[Courses.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Courses.java)
 
-[GetCourse.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0586245e-e216-4dd0-a0f8-732650b97519/GetCourse.java)
+[GetCourse.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/GetCourse.java)
 
-[Message.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b41ab1f6-0749-4cad-8a11-24c409078e4b/Message.java)
+[Message.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Message.java)
 
-[Mobile.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/95d28284-501a-4d66-83c1-a556489938a3/Mobile.java)
+[Mobile.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Mobile.java)
 
-[Response used.json](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccbeeca6-3335-4e94-876e-cd97763738b9/Response_used.json)
+[Response used.json](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Response_used.json)
 
-[Test.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b2c5c4d-168d-4a01-ae83-284438291475/Test.java)
+[Test.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Test.java)
 
-[WebAutomation.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fc0c2186-7e28-4239-8779-99df0999ecd6/WebAutomation.java)
+[WebAutomation.java](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/WebAutomation.java)
 
 ## Serialization
 
@@ -1732,7 +1738,7 @@ The example website we are going to use for this section: [https://www.rahulshet
 
 [https://rahulshettyacademy.com/client](https://rahulshettyacademy.com/client)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/10fe54e5-e2fa-401b-a5ee-a20f83fc9c8b/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2013.png)
 
 From the network tab we were able to identify the URI and payload:
 
@@ -1777,11 +1783,11 @@ productDescription:Addias Originals
 productFor:women
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6710ae5f-4205-40bd-abf4-00188798f43a/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2014.png)
 
 As adding product can only be done by users we need to add the token value in the header information.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0cc1483-630c-4631-820e-9d15a3e225ae/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2015.png)
 
 To send attachments (for the product):
 
@@ -1808,7 +1814,7 @@ Response:
 
 ## Order
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6e97594b-5dbe-43e9-8d49-31a4544ea632/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2016.png)
 
 POST: [https://rahulshettyacademy.com/api/ecom/order/create-order](https://rahulshettyacademy.com/api/ecom/order/create-order)
 
@@ -2281,7 +2287,7 @@ Similarly we want to record response. To do that just add another filter:
 
 Project Structure:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e5e40b8e-0b75-42ec-95e5-ddfe5164ab7b/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2017.png)
 
 ## Global Properties
 
@@ -2462,7 +2468,7 @@ In summary, the **`APIResources`** enum defines a set of constants representing 
 
 Lets say we have multiple scenarios and now we want to only run one tests from our feature file. To run specific test we can introduce tagging. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b77390b-b953-40d4-a488-9198980af2f2/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2018.png)
 
 In the test runner we add the tests (tags) we want to run:
 
@@ -2608,13 +2614,13 @@ And add it before dependencies. After adding this run `mvn test verify`
 
 The TestRunner created the below
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c201441e-506c-4bd0-85ca-9f134d1a5f00/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2019.png)
 
 The plugin is basically reading it and generating a report. 
 
 The report;
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9a56234a-f5cc-4f04-bca7-8c030b815d7d/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2020.png)
 
 ---
 
@@ -2634,13 +2640,13 @@ According to chatGPT:
 
 Below is websites structure:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de2004eb-ef1b-4a37-8fab-fc50bfee4f05/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2021.png)
 
 Here if we want to get character details an API call is made which gets all the information from the `GetCharacterDetails` API. Here if we want to just get the name we would still have to call the API and have POJO classes in place to get the info. 
 
 Furthermore, if we want to load the homepage we are querying multiple APIs. Which might cause performance issues.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/96be84bd-8c95-4e92-b755-dec5450b7771/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2022.png)
 
 With GraphQL (GQL) we would query to a single GraphQL end point which would get all the details. 
 
@@ -2715,7 +2721,7 @@ Based on the screen shot we have seen so far we would write queries with that ex
 
 In the documentation if we see an argument with `!` after the type that means its a mandatory argument. For example:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c3a86936-0812-47f3-8bf0-2ab5f8151007/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2023.png)
 
 In the example we have a character type with a bunch of fields associated with it. Now when we are querying a character we want just the characters name and gender. So to do that we write:
 
@@ -2746,15 +2752,15 @@ if we used APIs this would have been done by 2 separate requests.
 
 We can also have arguments that take different types;
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbc76a5e-9d98-4474-961d-8c555ddf38fb/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2024.png)
 
 The `CharacterFIlters` has the below fields:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/245b9b64-b428-4cc4-8f09-f6631d2d1dda/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2025.png)
 
 `CharacterResult` is the response we get. However, that itself is a type so we need to get the field name.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34f4ff45-9244-41bd-81dd-526216c4c72b/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2026.png)
 
 Below is the query we wrote to get the Rahul characters → info → count (how many characters have the name Rahul):
 
@@ -2812,7 +2818,7 @@ query($characterID: Int!)
 
 We can pass what we generated so far in postman by selecting the GQL option. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bb50ef87-31a3-4285-a3ba-3414489799c4/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2027.png)
 
 Below is an example:
 
@@ -2907,13 +2913,13 @@ Result:
 
 Creating data
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f4b970d9-849c-4e12-983c-57bdb0767170/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2028.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/815f8be7-9095-4850-b041-54e6eb06e3b1/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2029.png)
 
 Returns:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0d30924-d239-4fb1-8795-98c5912ee1c8/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2030.png)
 
 In mutation we can create and retrieve information (hybrid). 
 
@@ -2982,7 +2988,7 @@ Query variables
 }
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/02313371-db48-4788-a1d5-70cf722df46c/Untitled.png)
+![Untitled](API%20Testing%20by%20Maruf%208e7b389cbb9b4118b290a3153c498ca0/Untitled%2031.png)
 
 ## GQL with RestAssured
 
